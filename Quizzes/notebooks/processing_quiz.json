@@ -1,73 +1,73 @@
 [
     {
-        "question": "When will a taxon name have ambiguous matches in the WoRMS taxon match tool (WoRMS), i.e. multiple matches are possible? In case of...",
+        "question": "Quand un nom de taxon aura-t-il des correspondances ambiguës dans l'outil de correspondance de taxons de WoRMS, c'est-à-dire que plusieurs correspondances sont possibles? En cas de...",
         "answers": [
-            "Scientific name is not accepted",
-            "near_1 match type",
-            "Homonyms",
-            "Typing error"
+            "Le nom scientifique n'est pas accepté",
+            "near_1 match type (correspondance proche, un seul caractère du nom ne correspond pas)",
+            "Homonymes",
+            "Faute de frappe"
         ],
-        "answer_text": "The same genus-species combination can exist in different Kingdoms.",
+        "answer_text": "La même combinaison genre-espèce peut exister dans différents royaumes.",
         "correct_answer": 2
     },
     {
-        "question": "The dataset you are processing contains the taxon name Dinophysis intermedia (scientificnameID = urn:lsid:marinespecies.org:taxname:844470) for which the accepted name is Dinophysis fortii (scientificnameID urn:lsid:marinespecies.org:taxname:109624). What do you fill out as scientificName and scientificNameID?",
+        "question": "Le jeu de données que vous traitez contient le nom de taxon Dinophysis intermedia (ScientificnameID = urn: lsid: marinespecies.org: taxname: 844470) dont le nom accepté est Dinophysis fortii (scientificnameID urn: lsid: marinespecies.org: taxname: 109624). Que remplissez-vous en tant que ScientificName et ScientificNameID?",
         "answers": [
-            "<ul><li>scientificName: the accepted name Dinophysis fortii</li><li>scientificNameID: the LSID of the unaccepted name urn:lsid:marinespecies.org:taxname:844470</li></ul>",
-            "<ul><li>scientificName: the unaccepted name Dinophysis intermedia</li><li>scientificNameID: the LSID of the unaccepted name urn:lsid:marinespecies.org:taxname:844470</li></ul>",
-            "<ul><li>scientificName: the unaccepeted name Dinophysis intermedia</li><li>scientificNameID: the LSID of the accepted name urn:lsid:marinespecies.org:taxname:109624</li></ul>",
-            "<ul><li>scientificName: the accepted name Dinophysis fortii</li><li>scientificNameID: the LSID of the accepted name urn:lsid:marinespecies.org:taxname:109624</li></ul>"
+            "<ul><li>scientificName: le nom accepté Dinophysis fortii</li><li>scientificNameID: le LSID du nom non accepté urn:lsid:marinespecies.org:taxname:844470</li></ul>",
+            "<ul><li>scientificName: le nom non accepté Dinophysis intermedia</li><li>scientificNameID: le LSID du nom non accepté urn:lsid:marinespecies.org:taxname:844470</li></ul>",
+            "<ul><li>scientificName: le nom non accepté Dinophysis intermedia</li><li>scientificNameID: le LSID du nom accepté urn:lsid:marinespecies.org:taxname:109624</li></ul>",
+            "<ul><li>scientificName: le nom accepté Dinophysis fortii</li><li>scientificNameID: le LSID du nom accepté urn:lsid:marinespecies.org:taxname:109624</li></ul>"
         ],
-        "answer_text": "You should provide the taxon name as recorded in the dataset even if it is not the valid name. OBIS uses WoRMS as it’s taxonomic backbone and can get the accepted name an all other taxonomic information from there. Using the original name ensures traceability (you store the same as the one which was originally recorded). Moreover taxonomy is not stable: a taxon name which is considered to be an invalid synonym of one species to today, may be a valid taxon name tomorrow; using the original name ensures that you don’t need to modify the dataset every time taxonomy changes.",
+        "answer_text": "Vous devez fournir le nom du taxon tel qu'il est enregistré dans l'ensemble de données même s'il ne s'agit pas du nom valide. OBIS utilise WoRMS comme épine dorsale taxonomique et peut obtenir le nom accepté et toutes les autres informations taxonomiques à partir de là. L'utilisation du nom d'origine garantit la traçabilité (vous stockez le même que celui qui a été enregistré à l'origine). De plus, la taxonomie n'est pas stable: un nom de taxon qui est considéré comme un synonyme invalide d'une espèce jusqu'à aujourd'hui, peut être un nom de taxon valide demain; l'utilisation du nom d'origine garantit que vous n'avez pas besoin de modifier l'ensemble de données chaque fois que la taxonomie change.",
         "correct_answer": 1
     },
     {
-        "question": "The OBIS quality control process focuses on:",
+        "question": "Le processus de contrôle qualité OBIS se concentre sur:",
         "answers": [
-            "Checking for possible errors in the species nomenclature.",
-            "Uploading the data into the IPT.",
-            "Checking for possible errors in taxonomy, geographic coordinates, depth, and data formats.",
-            "Checking the number of records present in an Occurrence Core file."
+            "Vérification d'éventuelles erreurs dans la nomenclature des espèces.",
+            "Téléchargement des données dans l'IPT.",
+            "Recherche d'erreurs possibles dans la taxonomie, les coordonnées géographiques, la profondeur et les formats de données.",
+            "Vérification du nombre d'enregistrements présents dans un fichier Occurrence Core."
         ],
         "answer_text": "",
         "correct_answer": 2
     },
     {
-        "question": "Taxon names that do not match with WoRMS should: Select one",
+        "question": "Les noms de taxons qui ne correspondent pas à WoRMS doivent:",
         "answers": [
-            "be added to scientificName without a scientificNameID, but the name should be checked against other authoritative species registers, and if found be sent to the data management team of WoRMs (info@marinespecies.org) in order for the name to be added to WoRMS.",
-            "be replaced by another (correct) name that is in WoRMS.",
-            "be added to taxonRemarks and the scientificName field should be left empty in the occurrence file.",
-            "be submitted to the WoRMS taxonomic editor responsible for the taxon group, so he or she can add the name to WoRMS. Note that the scientificName field can hold names that are not in WoRMS and the WoRMS LSID can be added later in a new dataset version."
+            "Être ajouté à ScientificName sans ScientificNameID, mais le nom doit être vérifié par rapport à d'autres registres d'espèces faisant autorité, et s'il est trouvé être envoyé à l'équipe de gestion des données de WoRM (info@marinespecies.org) afin que le nom soit ajouté à WoRMS",
+            "Être remplacé par un autre nom (correct) qui se trouve dans WoRMS.",
+            "Être ajouté à taxonRemarks et le champ ScientificName doit être laissé vide dans le fichier d'occurrence.",
+            "Être soumis à l'éditeur taxonomique de WoRMS responsable du groupe de taxons, afin qu'il ou elle puisse ajouter le nom à WoRMS. Notez que le champ ScientificName peut contenir des noms qui ne figurent pas dans WoRMS et que le LSID de WoRMS peut être ajouté ultérieurement dans une nouvelle version du jeu de données."
         ],
-        "answer_text": "The eventID from the Event Core links the species occurrences to the sampling events and the abiotic measurements to the sampling events.",
+        "answer_text": "Vous devez vous assurez que le nom est validé au moins dans un autre registre reconnu avant de soumettre le nom à l'équipe de gestion de WoRMS.",
         "correct_answer": 0
     },
     {
-        "question": "You always need to correct occurrences with geographic coordinates located on land.",
+        "question": "Vous devez toujours corriger les occurrences avec des coordonnées géographiques situées sur terre.",
         "answers": [
-            "True",
-            "False"
+            "Vrai",
+            "Faux"
         ],
-        "answer_text": "You should first get in contact with the data provider and ask him/her to review and update the geographical coordinates if necessary. It is important that the original source file is corrected first. Note also that there are several reasons why a record can fall on land, e.g. the midpoint of a WKT, midpoint of an island, only the name of the country is provided and that country borders more than one sea, the species is a seabird, fossil record, etc..",
+        "answer_text": "Vous devez d'abord contacter le fournisseur de données et lui demander de revoir et de mettre à jour les coordonnées géographiques si nécessaire. Il est important que le fichier source d'origine soit d'abord corrigé. Notez également qu'il y a plusieurs raisons pour lesquelles un record peut tomber sur terre, par ex. le milieu d'un WKT, le milieu d'une île, seul le nom du pays est fourni et ce pays borde plus d'une mer, l'espèce est un oiseau de mer, un registre fossile, etc.",
         "correct_answer": 1
     },
     {
-        "question": "The errors in taxon names should be fixed by the Node Data Managers",
+        "question": "Les erreurs dans les noms de taxons doivent être corrigées par les gestionnaires de données des nœuds",
         "answers": [
-            "True",
-            "False"
+            "Vrai",
+            "Faux"
         ],
-        "answer_text": "You should only correct or update datasets with the consent of the original data provider.",
+        "answer_text": "Vous ne devez corriger ou mettre à jour les ensembles de données qu'avec le consentement du fournisseur de données d'origine.",
         "correct_answer": 1
     },
     {
-        "question": "When a Scientific Name is in WoRMS, but the taxonomic status is unaccepted (synonym), I can use the WoRMS LSID of the unaccepted name.",
+        "question": "Lorsqu'un nom scientifique est dans WoRMS, mais que le statut taxinomique n'est pas accepté (synonyme), je peux utiliser le LSID WoRMS du nom non accepté.",
         "answers": [
-            "True",
-            "False"
+            "Vrai",
+            "Faux"
         ],
-        "answer_text": "OBIS indeed uses the information from WoRMS and will add occurrences to the current accepted name.",
+        "answer_text": "OBIS utilise en effet les informations de WoRMS et ajoutera des occurrences au nom actuellement accepté.",
         "correct_answer": 0
     }
 ]
