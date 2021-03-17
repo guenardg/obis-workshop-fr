@@ -1,0 +1,137 @@
+[
+    {
+        "question": "Votre jeu de données représente un échantillonnage de plusieurs stations contenant des occurrences d'espèces et des données environnementales pour chacune d'elle. Vous disposez également du protocole d'échantillonnage pour chaque station et échantillon. Combien de fichiers aurez-vous après avoir organisé cet ensemble de données au format OBIS-ENV-DATA?",
+        "answers": [
+            "OBIS ne peut pas traiter tous ces types de données",
+            "Deux",
+            "Trois",
+            "Cinq",
+            "Un"
+        ],
+        "answer_text": "Un pour les événements d'échantillonnage (eventCore), un pour les occurrences d'espèces (extension d'occurrence), un pour les mesures et les faits d'échantillonnage (extension MeasurementOrFact étendue).",
+        "correct_answer": 2
+    },
+    {
+        "question": "Votre jeu de données représente un échantillonnage de plusieurs stations contenant des occurrences d'espèces et des données environnementales pour chacune d'elle. Vous disposez également du protocole d'échantillonnage pour chaque station et échantillon. Combien de fichiers aurez-vous après avoir organisé les données selon le format OBIS-ENV-DATA et publié sous forme d'archive DwC dans votre IPT?",
+        "answers": [
+            "Occurrence Core, MeasurementOrFact Extension, eml.xml (document de métadonnées) et meta.xml (description d'archive de données).",
+            "Event Core, Occurrence extension, ExtendedMeasurementOrFact Extension, eml.xml (document de métadonnées) et meta.xml (description d'archive de données).",
+            "Event Core, Occurrence extension, MeasurementOrFact Extension, eml.xml (document de métadonnées) et meta.xml (description d'archive de données).",
+            "Occurrence Core, Event extension, MeasurementOrFact Extension, eml.xml (document de métadonnées) et meta.xml (description d'archive de données)."
+        ],
+        "answer_text": "",
+        "correct_answer": 1
+    },
+    {
+        "question": "Si votre jeu de données contient des dates, des stations et des transects, quel type de fichier utiliserez-vous pour structurer ces informations?",
+        "answers": [
+            "Event Extension",
+            "Event Core",
+            "ExtendedMeasurementOrFact Extension",
+            "Occurrence Core"
+        ],
+        "answer_text": "",
+        "correct_answer": 1
+    },
+    {
+        "question": "Supposons que vous observez la biodiversité en utilisant des quadrats de 1 mètre sur 1 et que vous mesurez des variables environnementales (par exemple, la température et la salinité) pour chaque emplacement. Quel terme DwC relie les occurrences d'espèces aux mesures abiotiques?",
+        "answers": [
+            "measurementType",
+            "eventID",
+            "occurrenceID",
+            "parentEventID"
+        ],
+        "answer_text": "Le eventID du Event Core relie les occurrences d'espèces aux événements d'échantillonnage et les mesures abiotiques aux événements d'échantillonnage.",
+        "correct_answer": 1
+    },
+    {
+        "question": "Quel terme DwC relie votre enregistrement d'occurrence et vos mesures biotiques (par exemple, longueur corporelle, biomasse de poids humide, dénombrements)?",
+        "answers": [
+            "parentEventID",
+            "measurementTypeID",
+            "occurrenceID",
+            "eventID"
+        ],
+        "answer_text": "L'occurrenceID est un identifiant unique pour chaque occurrence d'espèce et est utilisé pour lier l'extension d'occurrence (ou le noyau d'occurrence) à l'extension extendedMeasurementOrFact.",
+        "correct_answer": 2
+    },
+    {
+        "question": "Selon le format de la table OBIS (longue), que représente les lignes de votre table dans le fichier Occurrence?",
+        "answers": [
+            "Occurrences",
+            "Variables"
+        ],
+        "answer_text": "",
+        "correct_answer": 0
+    },
+    {
+        "question": "Que représentent les colonnes de votre jeu de données de données selon le format de la table OBIS (longue)?",
+        "answers": [
+            "Échantillons",
+            "Variables",
+            "Événements",
+            "Occurrences"
+        ],
+        "answer_text": "",
+        "correct_answer": 1
+    },
+    {
+        "question": "Quel terme Darwin Core doit être unique pour vos enregistrements d'occurrences?",
+        "answers": [
+            "institutionCode",
+            "occurrenceID",
+            "eventID",
+            "parentEventID"
+        ],
+        "answer_text": "",
+        "correct_answer": 1
+    },
+    {
+        "question": "Si vous avez des mesures de poids humide et de longueur de tous vos enregistrements d'échantillons, vous devez créer un fichier Occurrence Core et une extension ExtendedMeasurementorFact.",
+        "answers": [
+            "Vrai",
+            "Faux"
+        ],
+        "answer_text": "",
+        "correct_answer": 0
+    },
+    {
+        "question": "Le fichier ExtendedMeasurementorFact Extension contient le nom scientifique des spécimens enregistrés lors d'un événement d'échantillonnage.",
+        "answers": [
+            "Vrai",
+            "Faux"
+        ],
+        "answer_text": "",
+        "correct_answer": 1
+    },
+    {
+        "question": "Le fichier ExtendedMeasurementorFact Extension a besoin de la colonne occurrenceID pour lier l'enregistrement d'événement d'échantillonnage aux mesures abiotiques.",
+        "answers": [
+            "Vrai",
+            "Faux"
+        ],
+        "answer_text": "",
+        "correct_answer": 1
+    },
+    {
+        "question": "Les termes MeasurementType et MeasurementTypeID font partie du fichier ExtendedMeasurementorFact Extension.",
+        "answers": [
+            "Vrai",
+            "Faux"
+        ],
+        "answer_text": "",
+        "correct_answer": 0
+    },
+    {
+        "question": "L'ensemble de données que vous traitez mentionne que pour le taxon Gadus morhua, 2 juvéniles et 1 femelle adulte avec des oeufs ont été observés. Comment cela se traduit-il en DwC?",
+        "answers": [
+            "Un enregistrement d'occurrence avec la structure suivante\n<ul><li>scientificName: Gadus morhua</li><li>lifeStage: 2 juvéniles et 1 femelle adulte avec des œufs</li></ul>",
+            "Deux enregistrements d'occurrence avec les structures suivantes\nEnregistrement 1:<ul><li>scientificName: Gadus morhua</li><li>lifeStage: 2 juveniles</li></ul>Enregistrement 2:<ul><li>scientificName: Gadus morhua</li><li>lifeStage: 1 femelle adulte avec des oeufs</li></ul>",
+            "Un enregistrement d'occurrence avec la structure suivante<ul><li>scientificName: Gadus morhua 2 juvéniles et 1 femelle adulte avec des œufs</li></ul>",
+            "Deux enregistrements d'occurrence avec les structures suivantes\nEnregistrement 1:<ul><li>DwC:scientificName: Gadus morhua</li><li>lifeStage: juvenile</li><li>individualCount: 2</li></ul>Enregistrement 2:<ul><li>scientificName: Gadus morhua</li><li>lifeStage: adulte</li><li>sex: femelle</li><li>reproductiveCondition: avec des oeufs</li><li>individualCount: 1</li></ul>",
+            "Deux enregistrements d'occurrence avec les structures suivantes\nEnregistrement 1:<ul><li>DwC:scientificName: Gadus morhua</li><li>measurementType: lifeStage et measurmentValue: juvenile</li><li>measurementType: individualCount et measurementValue: 2 et measurementUnit: individus</li></ul>\nEnregistrement 2:<ul><li>scientificName: Gadus morhua</li><li>measurementType: lifeStage et measurementValue: adulte</li><li>measurementType: Sex et measurementValue: femelle</li><li>measurementType: reproductiveCondition et measurementValue: avec des oeufs</li><li>measurementType: individualCount et measurementValue: 1 and measurementUnit: individus</li></ul>"
+        ],
+        "answer_text": "Le champ ScientificName ne doit contenir qu'un nom de taxon, les autres informations doivent être réparties dans d'autres champs pertinents. Notez que bien qu'OBIS autorise l'utilisation des termes DwC sex, lifestage et individualCount, il est recommandé que ces données soient stockées dans ExtendedMeasurementOrFact Extension (eMoF) car cela permet la liaison aux vocabulaires BODC pour le stade de vie http://vocab.nerc.ac.uk/collection/S11/current/ et le genre http://vocab.nerc.ac.uk/collection/S10/current/",
+        "correct_answer": 4
+    }
+]
