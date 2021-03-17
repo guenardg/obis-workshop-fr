@@ -1,6 +1,6 @@
 [
     {
-        "question": "If you have data about dolphin sightings, which vocabulary should you use for the DwC term: basisOfRecord?",
+        "question": "Si vous avez des données sur les observations de dauphins, quel vocabulaire devriez-vous utiliser pour le terme DwC: baseOfRecord?",
         "answers": [
             "LivingSpecimen",
             "Present",
@@ -11,27 +11,27 @@
         "correct_answer": 3
     },
     {
-        "question": "What does it mean when individualCount has the following value?",
+        "question": "Qu'est-ce que cela signifie quand individualCount a la valeur suivante?",
         "answers": [
             {
                 "NULL": [
-                    "100 individuals were observed",
-                    "There is no information on individualCount",
-                    "The species was not found, the occurrenceStatus should be set to 'Absent'"
+					"100 individus ont été observés",
+                    "Il n'y a pas d'informations sur individualCount",
+                    "L'espèce n'a pas été trouvée, l'occurrenceStatus doit être défini sur 'Absent'"
                 ]
             },
             {
                 "0": [
-                    "100 individuals were observed",
-                    "There is no information on individualCount",
-                    "The species was not found, the occurrenceStatus should be set to 'Absent'"
+					"100 individus ont été observés",
+                    "Il n'y a pas d'informations sur individualCount",
+                    "L'espèce n'a pas été trouvée, l'occurrenceStatus doit être défini sur 'Absent'"
                 ]
             },
             {
                 "100": [
-                    "100 individuals were observed",
-                    "There is no information on individualCount",
-                    "The species was not found, the occurrenceStatus should be set to 'Absent'"
+					"100 individus ont été observés",
+                    "Il n'y a pas d'informations sur individualCount",
+                    "L'espèce n'a pas été trouvée, l'occurrenceStatus doit être défini sur 'Absent'"
                 ]
             }
         ],
@@ -43,18 +43,18 @@
         }
     },
     {
-        "question": "What represents the DwC term: locationID?",
+        "question": "Que représente le terme DwC: locationID?",
         "answers": [
-            "The name of the location where the sample was taken.",
-            "A reference code provided by the WoRMS web service.",
-            "The event identifier",
-            "An unique and persistent identifier for the location of the record obtained from a gazetteer service, such as www.marineregions.org."
+            "Le nom de l'endroit où l'échantillon a été prélevé.",
+            "Un code de référence fourni par le service Web WoRMS.",
+            "L'identifiant d'événement",
+            "Un identifiant unique et persistant pour l'emplacement de l'enregistrement obtenu à partir d'un service de répertoire géographique, tel que www.marineregions.org."
         ],
         "answer_text": "",
         "correct_answer": 3
     },
     {
-        "question": "If you have a species name that includes the word 'aff.', which DwC term can hold this information?",
+        "question": "Si vous avez un nom d'espèce qui comprend le mot «aff.», Quel terme DwC peut contenir cette information?",
         "answers": [
             "associatedTaxa",
             "identificationQualifier",
@@ -65,86 +65,75 @@
         "correct_answer": 1
     },
     {
-        "question": "Your dataset represents a multiple station survey holding species occurrences and environmental data for each station. You also have the sampling protocol for each station and sample. How many files will you have after organising the data according to the OBIS-ENV-DATA format and published as a DwC archive in your IPT?",
+        "question": "Votre jeu de données représente un échantillonnage de plusieurs stations contenant des occurrences d'espèces et des données environnementales pour chaque station. Vous disposez également du protocole d'échantillonnage pour chaque station et échantillon. Combien de fichiers aurez-vous après avoir organisé les données selon le format OBIS-ENV-DATA et publié en tant qu'archive DwC dans votre IPT?",
         "answers": [
-            "Occurrence Core, MeasurementOrFact Extension, eml.xml metadata document and meta.xml data archive descriptor",
-            "Event Core, Occurrence extension, ExtendedMeasurementOrFact Extension, eml.xml metadata document and meta.xml data archive descriptor",
-            "Event Core, Occurrence extension, MeasurementOrFact Extension, eml.xml metadata document and meta.xml data archive descriptor",
-            "Occurrence Core, Event extension, MeasurementOrFact Extension, eml.xml metadata document and meta.xml data archive descriptor"
+            "Occurrence Core, MeasurementOrFact Extension, eml.xml document de métadonnées et meta.xml descripteur d'archive de données",
+            "Event Core, Occurrence extension, ExtendedMeasurementOrFact Extension, eml.xml document de métadonnées et meta.xml descripteur d'archive de données",
+            "Event Core, Occurrence extension, MeasurementOrFact Extension, eml.xml document de métadonnées et meta.xml descripteur d'archive de données",
+            "Occurrence Core, Event extension, MeasurementOrFact Extension, eml.xml document de métadonnées et meta.xml descripteur d'archive de données"
         ],
         "answer_text": "",
         "correct_answer": 1
     },
     {
-        "question": "What represents the columns of your data set in the OBIS table (long) format?",
+        "question": "Que représentent les colonnes de votre jeu de données avec un format de tableau OBIS (long)?",
         "answers": [
-            "Samples",
+            "Échantillons",
             "Variables",
-            "Events",
+            "Événements",
             "Occurrences"
         ],
         "answer_text": "",
         "correct_answer": 1
     },
     {
-        "question": "The ExtendedMeasurementorFact Extension file contains the scientific name of the specimens recorded during a sampling event.",
+        "question": "Le fichier ExtendedMeasurementorFact contient le nom scientifique des spécimens enregistrés lors d'un événement d'échantillonnage.",
         "answers": [
-            "True",
-            "False"
+            "Vrai",
+            "Faux"
         ],
         "answer_text": "",
         "correct_answer": 1
     },{
-        "question": "The dataset you are processing mentions that of the taxon Gadus morhua there were 2 juveniles and 1 female adult with eggs observed. How does this translate to DwC?",
+        "question": "Le jeu de données que vous traitez mentionne que pour le taxon Gadus morhua, 2 juvéniles et 1 femelle adulte avec des oeufs ont été observés. Comment cela se traduit-il en DwC?",
         "answers": [
-            "One occurrence record with the following structure\n<ul><li>scientificName: Gadus morhua</li><li>lifeStage 2 juveniles and 1 female adult with eggs</li></ul>",
-            "Two occurrence record with the following structures\nRecord 1:<ul><li>scientificName: Gadus morhua</li><li>lifeStage: 2 juveniles</li></ul>Record 2:<ul><li>scientificName: Gadus morhua</li><li>lifeStage: 1 female adult with eggs</li></ul>",
-            "One occurrence record with the following structure<ul><li>scientificName: Gadus morhua 2 juveniles and 1 female adult with eggs</li></ul>",
-            "Two occurrence record with the following structures\nRecord 1:<ul><li>DwC:scientificName: Gadus morhua</li><li>lifeStage: juvenile</li><li>individualCount: 2</li></ul>Record 2:<ul><li>scientificName: Gadus morhua</li><li>lifeStage:adult</li><li>sex: female</li><li>reproductiveCondition: with eggs</li><li>individualCount: 1</li></ul>",
-            "Two occurrence record with the following structures\nRecord 1:<ul><li>DwC:scientificName: Gadus morhua</li><li>eMoF Type: lifeStage and eMoF Value: juvenile</li><li>eMoF Type: individualCount and eMoF Value: 2 and eMoF Unit: individuals</li></ul>\nRecord 2:<ul><li>scientificName: Gadus morhua</li><li>eMoF Type: lifeStage and eMoF Value: adult</li><li>eMoF Type: Sex and eMoF Value: female</li><li>eMoF Type: reproductiveCondition and eMoF Value: with eggs</li><li>eMoF Type: individualCount and eMoF Value: 1 and eMoF Unit: individuals</li></ul>"
+            "Un enregistrement d'occurrence avec la structure suivante\n<ul><li>scientificName: Gadus morhua</li><li>lifeStage: 2 juvéniles et 1 femelle adulte avec des œufs</li></ul>",
+            "Enregistrement de deux événements avec les structures suivantes\nEnregistrement 1:<ul><li>scientificName: Gadus morhua</li><li>lifeStage: 2 juveniles</li></ul>Enregistrement 2:<ul><li>scientificName: Gadus morhua</li><li>lifeStage: 1 femelle adulte avec des œufs</li></ul>",
+            "Un enregistrement d'occurrence avec la structure suivante<ul><li>scientificName: Gadus morhua 2 juvéniles et 1 femelle adulte avec des œufs</li></ul>",
+            "Enregistrement de deux événements avec les structures suivantes\nEnregistrement 1:<ul><li>DwC:scientificName: Gadus morhua</li><li>lifeStage: juvenile</li><li>individualCount: 2</li></ul>Enregistrement 2:<ul><li>scientificName: Gadus morhua</li><li>lifeStage:adulte</li><li>sex: femelle</li><li>reproductiveCondition: avec des oeufs</li><li>individualCount: 1</li></ul>",
+            "Enregistrement de deux événements avec les structures suivantes\nEnregistrement 1:<ul><li>DwC:scientificName: Gadus morhua</li><li>eMoF Type: lifeStage and eMoF Value: juvenile</li><li>eMoF Type: individualCount et eMoF Value: 2 et eMoF Unit: individus</li></ul>\nEnregistrement 2:<ul><li>scientificName: Gadus morhua</li><li>eMoF Type: lifeStage et eMoF Value: adulte</li><li>eMoF Type: Sex et eMoF Value: femelle</li><li>eMoF Type: reproductiveCondition et eMoF Value: avec des oeufs</li><li>eMoF Type: individualCount et eMoF Value: 1 et eMoF Unit: individus</li></ul>"
         ],
-        "answer_text": "The field scientificName should only contain a taxon name, other information should be split up in other relevant fields. Note that while OBIS allows the use of the DwC terms sex, lifestage, and individualCount, it's recommended that these data are stored in the ExtendedMeasurementOrFact Extension (eMoF) as this allows the linking to the BODC vocabularies for life stage http://vocab.nerc.ac.uk/collection S11/current/ and gender http://vocab.nerc.ac.uk/collection/S10/current/",
+        "answer_text": "Le champ ScientificName ne doit contenir qu'un nom de taxon, les autres informations doivent être réparties dans d'autres champs pertinents. Notez que bien qu'OBIS autorise l'utilisation des termes DwC sex, lifestage et individualCount, il est recommandé que ces données soient stockées dans ExtendedMeasurementOrFact Extension (eMoF) car cela permet la liaison aux vocabulaires BODC pour les stades de vie http://vocab.nerc.ac.uk/collection/S11/current/ et le genre http://vocab.nerc.ac.uk/collection/S10/current/",
         "correct_answer": 4
     },
     {
-        "question": "The dataset you are processing contains the taxon name Dinophysis intermedia (scientificnameID = urn:lsid:marinespecies.org:taxname:844470) for which the accepted name is Dinophysis fortii (scientificnameID urn:lsid:marinespecies.org:taxname:109624). What do you fill out as scientificName and scientificNameID?",
+        "question": "Le jeu de données que vous traitez contient le nom de taxon Dinophysis intermedia (ScientificnameID = urn: lsid: marinespecies.org: taxname: 844470) dont le nom accepté est Dinophysis fortii (scientificnameID urn: lsid: marinespecies.org: taxname: 109624). Que remplissez-vous en tant que ScientificName et ScientificNameID?",
         "answers": [
-            "<ul><li>scientificName: the accepted name Dinophysis fortii</li><li>scientificNameID: the LSID of the unaccepted name urn:lsid:marinespecies.org:taxname:844470</li></ul>",
-            "<ul><li>scientificName: the unaccepted name Dinophysis intermedia</li><li>scientificNameID: the LSID of the unaccepted name urn:lsid:marinespecies.org:taxname:844470</li></ul>",
-            "<ul><li>scientificName: the unaccepeted name Dinophysis intermedia</li><li>scientificNameID: the LSID of the accepted name urn:lsid:marinespecies.org:taxname:109624</li></ul>",
-            "<ul><li>scientificName: the accepted name Dinophysis fortii</li><li>scientificNameID: the LSID of the accepted name urn:lsid:marinespecies.org:taxname:109624</li></ul>"
+            "<ul><li>scientificName: le nom accepté Dinophysis fortii</li><li>scientificNameID: le LSID du nom non accepté urn:lsid:marinespecies.org:taxname:844470</li></ul>",
+            "<ul><li>scientificName: le nom non accepté Dinophysis intermedia</li><li>scientificNameID: le LSID du nom non accepté urn:lsid:marinespecies.org:taxname:844470</li></ul>",
+            "<ul><li>scientificName: le nom non accepté Dinophysis intermedia</li><li>scientificNameID: le LSID du nom accepté urn:lsid:marinespecies.org:taxname:109624</li></ul>",
+            "<ul><li>scientificName: le nom accepté Dinophysis fortii</li><li>scientificNameID: le LSID du nom accepté urn:lsid:marinespecies.org:taxname:109624</li></ul>"
         ],
-        "answer_text": "You should provide the taxon name as recorded in the dataset even if it is not the valid name. OBIS uses WoRMS as it’s taxonomic backbone and can get the accepted name an all other taxonomic information from there. Using the original name ensures traceability (you store the same as the one which was originally recorded). Moreover taxonomy is not stable: a taxon name which is considered to be an invalid synonym of one species to today, may be a valid taxon name tomorrow; using the original name ensures that you don’t need to modify the dataset every time taxonomy changes.",
+        "answer_text": "Vous devez fournir le nom du taxon tel qu'il est enregistré dans le jeu de données même s'il ne s'agit pas du nom valide. OBIS utilise WoRMS comme épine dorsale taxonomique et peut obtenir le nom accepté et toutes les autres informations taxonomiques à partir de là. L'utilisation du nom d'origine garantit la traçabilité (vous stockez le même que celui qui a été enregistré à l'origine). De plus, la taxonomie n'est pas stable: un nom de taxon qui est considéré comme un synonyme invalide d'une espèce jusqu'à aujourd'hui, peut être un nom de taxon valide demain; l'utilisation du nom d'origine garantit que vous n'avez pas besoin de modifier le jeu de données chaque fois que la taxonomie change.",
         "correct_answer": 1
     },
     {
-        "question": "You always need to correct occurrences with geographic coordinates located on land.",
+        "question": "Vous devez toujours corriger les occurrences qui ont des coordonnées géographiques situées sur terre.",
         "answers": [
-            "True",
-            "False"
+            "Vrai",
+            "Faux"
         ],
-        "answer_text": "You should first get in contact with the data provider and ask him/her to review and update the geographical coordinates if necessary. It is important that the original source file is corrected first. Note also that there are several reasons why a record can fall on land, e.g. the midpoint of a WKT, midpoint of an island, only the name of the country is provided and that country borders more than one sea, the species is a seabird, fossil record, etc..",
+        "answer_text": "Vous devez d'abord contacter le fournisseur de données et lui demander de revoir et de mettre à jour les coordonnées géographiques si nécessaire. Il est important que le fichier source d'origine soit d'abord corrigé. Notez également qu'il y a plusieurs raisons pour lesquelles un record peut tomber sur terre, par ex. le milieu d'un WKT, le milieu d'une île, seul le nom du pays est fourni et ce pays borde plus d'une mer, l'espèce est un oiseau de mer, un registre fossile, etc.",
         "correct_answer": 1
     },    {
-        "question": "When will a taxon name have ambiguous matches in the WoRMS taxon match tool (WoRMS), i.e. multiple matches are possible? In case of...",
+        "question": "Quand un nom de taxon aura-t-il des correspondances ambiguës dans l'outil de correspondance de taxons de WoRMS (WoRMS), c'est-à-dire que plusieurs correspondances sont possibles? En cas de...",
         "answers": [
-            "Scientific name is not accepted",
-            "near_1 match type",
-            "Homonyms",
-            "Typing error"
+            "Le nom scientifique n'est pas accepté",
+            "near_1 match type (correspondance proche, un seul caractère du nom ne correspond pas)",
+            "Homonymes",
+            "Faute de frappe"
         ],
-        "answer_text": "The same genus-species combination can exist in different Kingdoms.",
-        "correct_answer": 2
-    },
-    {
-        "question": "When will a taxon name have ambiguous matches in the WoRMS taxon match tool (WoRMS), i.e. multiple matches are possible? In case of...",
-        "answers": [
-            "Scientific name is not accepted",
-            "near_1 match type",
-            "Homonyms",
-            "Typing error"
-        ],
-        "answer_text": "The same genus-species combination can exist in different Kingdoms.",
+        "answer_text": "La même combinaison genre-espèce peut exister dans différents royaumes.",
         "correct_answer": 2
     }
 ]
