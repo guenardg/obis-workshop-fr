@@ -1,11 +1,18 @@
-## OBIS, DarwinCore, and IPTs Workshop -
+## Session de travail sur OBIS, DarwinCore, et IPTs
 
-This workshop has been adapted from the standard 4.5 day OBIS training workshop and is aimed at researchers and data professionals who may be creating or aggregating biological presence data with a desire to report that data to OBIS via their national OBIS Node. 
+Cet atelier a été adapté de l'atelier de formation OBIS standard de 4,5 jours et s'adresse aux chercheurs et aux professionnels des données susceptibles de créer ou d'agréger des données de présence biologique avec le désir de rapporter ces données vers OBIS via leur nœud OBIS national. Cette version est la traduction française de l'atelier.
 
 
 
-#### Facilitators
-**Name** - *(home OBIS node)* - email
+#### Facilitateurs
+**Nom** - *(home OBIS node)* - email
+
+
+Gabriel Leblanc - (Observatoire Global du Saint-Laurent) - leblancg@ogsl.ca
+
+Julie Dionne Lavoie -  (Observatoire Global du Saint-Laurent) - dionnej@ogsl.ca
+
+Pauline Chauvet - (Observatoire Global du Saint-Laurent) - chauvetp@ogsl.ca
 
 Jon Pye - (Ocean Tracking Network) - jdpye@dal.ca
 
@@ -13,179 +20,180 @@ Brian Jones -  (Ocean Tracking Network) - brian.jones@dal.ca
 
 Naomi Tress - (Ocean Tracking Network) - ntress@dal.ca
 
-Many thanks to Ward Appeltans, Leen Vandepitte, Pieter Provoost, Daphnis De Pooter, Abby Benson and all those throughout the OBIS community who helped build and refine the source material used in assembling this workshop. We hope that our adaptation is useful, fit for purpose, and results in productive outcomes for all prospective OBIS contributors.
+
+Un grand merci à Ward Appeltans, Leen Vandepitte, Pieter Provoost, Daphnis De Pooter, Abby Benson et tous ceux de la communauté OBIS qui ont aidé à construire et affiner le matériel source utilisé pour assembler cet atelier. Nous espérons que notre adaptation sera utile, adaptée à son objectif et aboutira à des résultats productifs pour tous les contributeurs potentiels à OBIS.
 
 
-### Goals of the Workshop:
+### Buts de cet atelier de formation :
 
-Give attendees an idea of what OBIS is and how it functions, why and how to become compliant with OBIS data and metadata formatting and data policy, how OBIS reporting pipelines work. Allow time to investigate solutions to meeting OBIS-compliance from user-held datasets and work in groups with support from trained bioinformaticians to produce DarwinCore archives fit for ingestion into OBIS nodes, especially OBIS-Canada 
+Donnez aux participants une idée de ce qu'est OBIS et de son fonctionnement, pourquoi et comment se mettre en conformité avec les données OBIS, le formatage des métadonnées, la politique de données et comment le pipelines OBIS fonctionne. Prévoyez du temps pour rechercher des solutions qui permettrons de répondre aux normes OBIS. Le travail peut être fait à partir d'ensembles de données détenus par les utilisateurs, vous pouvez travailler en groupe sur ces données. Vous aurez le soutien de bio-informaticiens qualifiés pour produire des archives DarwinCore adaptées à l'ingestion dans les nœuds OBIS, en particulier OBIS-Canada.
 
-Highlight the utility of providing data to OBIS Canada (and onward to OBIS), learn how to create Darwin Core Archives.  
+Mettre en évidence l'utilité de fournir des données à OBIS Canada (et ensuite à OBIS), apprendre à créer des archives Darwin Core. 
 
-Provide our own institutionally held project data and metadata in EML/DwC-A format to OBIS Canada for publication/aggregation.  
+Fournir nos propres données de projet et métadonnées institutionnelles au format EML / DwC-A à OBIS Canada pour publication / agrégation. 
 
-Deliver curriculum via OceanTeacher Global Academy and/or GitHub to provide a permanent resource for users to refer back to. 
+Fournir un programme via OceanTeacher Global Academy et / ou GitHub pour permettre d'avoir une ressource permanente à laquelle les utilisateurs peuvent se référer.
 
 
-### Schedule:
+### Horaire:
 
-##### Day 1
+##### Jour 1
 
-**Welcome, Introductions, goals for the workshop**
+**Bienvenue, présentations, objectifs de l'atelier**
 
-**Intro to OBIS  (PPT 01)**
+**Introduction à OBIS  (PPT 01)**
 
-**Intro to WoRMS**
+**Introduction à WoRMS**
 
-**Workshop Schedule/Outline**
+**Horaire / aperçu de l'atelier**
 
--15m Break-
+-15m Pause-
 
-**Intro to Darwin Core  (PPT 02)**
+**Introduction à Darwin Core  (PPT 02)**
 
-* History of DarwinCore  
+* Histoire de DarwinCore  
 
-* Terms, definitions, Resources for End Users
+* Termes, définitions, ressources pour les utilisateurs finaux
   
-* Occurrence, Location, Time, and Quantity in Darwin Core
+* Occurrence, emplacement, heure et quantité dans Darwin Core
 
-* Occurrence Core and Event Core
+* Occurrence Core et Event Core
 
 * Quiz - DwC Terms  (DwC Quiz.ipynb)
 
--1hr Lunch Break-
+-1hr Pause diner-
 
 **Darwin Core II  (PPT 03)**
 
-* Darwin Core Archives (DwC-A) 
+* Archives Darwin Core (DwC-A) 
         
-    * Using the R package `obistools` for creating archives
+    * Utilisation du package R `obistools` pour créer des archives
           
-* Minimum required information for a DwC-A     
+* Informations minimales requises pour une archive (DwC-A)    
      
-    * How to represent DwC schemas and types
+    * Comment représenter les schémas et les types DwC
          
     * Occurrence Core + MeasurementOrFact
 
-    * Examining a MoF table in R
+    * Examen d'une table MoF dans R
 
--15m Break-
+-15m Pause-
 
 **Darwin Core III**  (PPT 03)
 
-* Representing Event Core in DwC Archives 
+* Représenter Event Core dans les archives DwC 
               
 * OBIS-ENV-DATA
         
-    * Working with OBIS-ENV archives in R
+    * Travailler avec les archives OBIS-ENV dans R
               
     * (Quiz - Data Formats Quiz.ipynb)
 
-**Day 1 Q+A and Feedback**
+**Jour 1 Q + R et Feedback**
 
 
-##### Day 2
+##### Jour 2
 
-**Ecological Metadata Language and OBIS**  (PPT 04)
+**Ecological Metadata Language et OBIS**  (PPT 04)
 
-*Hands-on session 1*
+*Session de travail 1*
 
-* Data processing, taxon matching, QC using the robis and obistools R packages
+* Traitement des données, correspondance des taxons, contrôle qualité à l'aide des packages robis et obistools
 
--15m Break-
+-15m Pause-
 
-*Hands-on session 1 cont.*
+*Session de travail 1 - suite*
 
--1hr Lunch Break-
+-1hr Pause diner-
 
 **WoRMS**
 
-* Accessing WoRMS webservices (REST API)
+* Accéder aux services Web de WoRMS (REST API)
 
 **OBIS**
 
-* Using the OBIS Data mapper to discover OBIS held datasets
+* Utilisation du OBIS Data mapper pour découvrir les jeux de données contenus dans OBIS
 
--15m Break-
+-15m Pause-
 
-* OBIS API v3 – using the REST API  
+* OBIS API v3 – en utilisant le REST API  
     
-* Using the robis and obistools packages to discovery OBIS-held datasets
+* Utilisation des packages robis et obistools pour découvrir les ensembles de données contenus dans OBIS
     
     
-**Day 3**    
+**Jour 3**    
     
-**Publishing your data via OBIS**  (PPT 05)
+**Publication de vos données via OBIS**  (PPT 05)
 
-* Process of submitting/updating DwC archives to OBIS Canada
-    * OBIS IPT Walkthrough
-    * Verification of logins
+* Processus de soumission / mise à jour des archives DwC à OBIS Canada
+    * Procédure pas à pas de l'IPT de OBIS
+    * Vérification des identifiants pour s'assurer que tous ayez un accès
 
-    * OBIS, OBIS Canada and institutions that contribute to it
+    * OBIS, OBIS Canada et les institutions qui y contribuent
 
-    * Contributing data to an OBIS Node
+    * Contribution à l'ajout de données dans un nœud OBIS
     
--15m Break-
+-15m Pause-
 
-**OBIS Guidelines on Data Sharing and Use**
+**Directives OBIS sur le partage et l'utilisation des données**
     
-* Motivations for sharing data
+* Motivations pour partager des données
     
-* Licensing your dataset, CC licenses, OBIS default data licens, implications
+* Licence de votre ensemble de données, licences CC, licence de données par défaut OBIS, implications
 
 * (Quiz)
 
--1hr Lunch Break-
+-1hr Pause diner-
 
-*Hands-on Session 2*
+*Session de travail 2*
 
-**Mapping (user-provided) dataset into parseable DwC-A / EML package and submitting to OBIS Canada**
+**Mappage de l'ensemble de données (fourni par l'utilisateur) dans un package DwC-A / EML conforme et soumission à OBIS Canada**
 
--15m Break-
+-15m Pause-
 
-*Hands-on Session 2 cont.*
+*Session de travail 2 - suite*
 
-**Data mapping Check-in/report, Day 3 Q+A and Feedback**
-
-**Day 4**
-
-*Hands-on Session 3*  (3_visualizations.rmd)
-
-**Finding, collecting, visualizing and analyzing data from DwC archives provided from OBIS's data portal or via robis (Binder/JuPyTeR notebook session)**
+**Retour sur le mappage des données de la journée 3, Q + R et Feedback**
 
 
+**Jour 4**
 
--15m Break-
+*Session de travail 3*  (3_visualizations.rmd)
 
-*Hands-on Session 3 Cont.
+**Rechercher, collecter, visualiser et analyser les données des archives DwC fournies depuis le portail de données d'OBIS ou via robis (session Binder / JuPyTeR notebook)**
 
--1hr Lunch Break-
+-15m Pause-
 
-**Contributing to OBIS and OBIS Canada**
+*Session de travail 3 - suite*
 
-* As a data contributor
+-1hr Pause diner-
+
+**Contribuer à OBIS et OBIS Canada**
+
+* En tant que contributeur de données
     
-* As a collections manager
+* En tant que gestionnaire de collections
     
-* As a software developer
+* En tant que développeur de logiciels
 
-*Discussion / Hands-on session 2 or 3 cont.*
+*Discussion / Suite - Session de travail 2 ou 3*
 
--15m Break-
+-15m Pause-
 
-Recap Quiz
+Quiz récapitulatif
 
-*Hands-on session 2 or 3 cont.*
+*Session de travail 2 ou 3 - suite*
 
-**Continuing Engagement w/ OBIS and OBIS Canada, Day 4 Q+A, and Feedback**
+**Engagement continu avec OBIS et OBIS Canada, retour jour 4, Q + R et feedback**
 
-**Question and Answer, Wrap-up and Next Steps** 
+**Questions et réponses, récapitulatif et étapes suivantes** 
 
-**Answer questions, evaluate workshop content, plan necessary follow-ups**
+**Répondre aux questions, évaluer le contenu de l'atelier, planifier les suivis nécessaires**
 
 
-Useful Links
+Liens utiles
 
-* https://classroom.oceanteacher.org/enrol/index.php?id=430 Ocean Teacher related course
-* https://youtu.be/4rVEkWOhkoM Introduction to IOC, IODE, OBIS, OTGA by Ward Appeltans.
+* https://classroom.oceanteacher.org/enrol/index.php?id=430 cours reliés à la formation
+* https://youtu.be/4rVEkWOhkoM introduction au CIO, IODE, OBIS, OTGA par Ward Appeltans
 * http://ipt.iobis.org/obiscanada/ OBIS Canada
+* https://dwc.tdwg.org/terms Guide rapide pour tous les termes DwC essentiel/important
