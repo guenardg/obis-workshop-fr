@@ -26,7 +26,7 @@ Un grand merci à Ward Appeltans, Leen Vandepitte, Pieter Provoost, Daphnis De P
 
 ### Buts de cet atelier de formation :
 
-Donnez aux participants une idée de ce qu'est OBIS et de son fonctionnement, pourquoi et comment se mettre en conformité avec les données OBIS, le formatage des métadonnées, la politique de données et comment le pipelines OBIS fonctionne. Prévoyez du temps pour rechercher des solutions qui permettrons de répondre aux normes OBIS. Le travail peut être fait à partir d'ensembles de données détenus par les utilisateurs, vous pouvez travailler en groupe sur ces données. Vous aurez le soutien de bio-informaticiens qualifiés pour produire des archives DarwinCore adaptées à l'ingestion dans les nœuds OBIS, en particulier OBIS-Canada.
+Donnez aux participants une idée de ce qu'est OBIS et de son fonctionnement, pourquoi et comment se mettre en conformité avec les données OBIS, le formatage des métadonnées, la politique de données et comment le pipelines OBIS fonctionne. Prévoyez du temps pour rechercher des solutions qui permettront de répondre aux normes OBIS. Le travail peut être fait à partir d'ensembles de données détenus par les utilisateurs, vous pouvez travailler en groupe sur ces données. Vous aurez le soutien de bio-informaticiens qualifiés pour produire des archives DarwinCore adaptées à l'ingestion dans les nœuds OBIS, en particulier OBIS-Canada.
 
 Mettre en évidence l'utilité de fournir des données à OBIS Canada (et ensuite à OBIS), apprendre à créer des archives Darwin Core. 
 
