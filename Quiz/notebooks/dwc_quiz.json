@@ -1,96 +1,96 @@
 [
     {
         "question": "Votre ensemble de données contient des données d'abondance, par exemple 25 individus par litre. Comment devez-vous enregistrer ceci :",
-        "réponses": [
+        "answers": [
             "DwC:individualCount: 25 par litre",
             "DwC:organismQuantity: 25 et DwC:organismQuantityType: individu par litre",
             "MeasurementType: abondance; MeasurementValue: 25 ; MeasurementUnit: individu par litre",
             "DwC:abundance: 25 individus par litre"
         ],
-        "texte_réponse": "",
-        "réponse_correcte": 2
+        "answer_text": "",
+        "correct_answer": 2
     },
     {
         "question": "Si vous avez un nom d'espèce qui comprend le mot «aff.», Quel terme DwC peut contenir cette information?",
-        "réponses": [
+        "answers": [
             "associatedTaxa",
             "identificationQualifier",
             "bibliographicCitation",
             "identificationReferences"
         ],
-        "texte_réponse": "",
-        "réponse_correcte": 1
+        "answer_text": "",
+        "correct_answer": 1
     },
     {
         "question": "Je n'ai que le pays comme information de localisation, pas de coordonnées. Que devrais-je faire?",
-        "réponses": [
+        "answers": [
             "Ajoutez le nom du pays dans DwC:location. OBIS ajoute automatiquement les coordonnées",
             "Ajoutez le nom de la EEZ du pays dans DwC:country. OBIS ajoute automatiquement les coordonnées",
             "Fournissez le point médian et le rayon du pays EEZ (disponible sur marineregions.org) dans DwC:decimalLatitude, DwC:decimalLongitude et DwC:coordinateuncertaintyInMeters et indiquez le nom de la EEZ du pays dans DwC:location et ajoutez l'ID provenant de marineregions (MRGID) dans DwC:locationID",
             "Ajoutez le code de pays ISO dans DwC:country. OBIS ajoute automatiquement les coordonnées"
         ],
-        "texte_réponse": "La bonne réponse est: Fournissez le point médian et le rayon du pays EEZ (disponible sur marineregions.org) dans DwC:decimalLatitude, DwC:decimalLongitude et DwC:coordinateuncertaintyInMeters et indiquez le nom de la EEZ du pays dans DwC:location et ajoutez l'ID provenant de marineregions (MRGID) dans DwC:locationID",
-        "réponse_correcte": 2
+        "answer_text": "La bonne réponse est: Fournissez le point médian et le rayon du pays EEZ (disponible sur marineregions.org) dans DwC:decimalLatitude, DwC:decimalLongitude et DwC:coordinateuncertaintyInMeters et indiquez le nom de la EEZ du pays dans DwC:location et ajoutez l'ID provenant de marineregions (MRGID) dans DwC:locationID",
+        "correct_answer": 2
     },
     {
-        "question": "Quelles dates et heures sont acceptées pour OBIS? Plusieurs réponses sont possibles.",
-        "réponses": [
+        "question": "Quelles dates et heures sont acceptées pour OBIS? Plusieurs answers sont possibles.",
+        "answers": [
             "2010",
             "2013-02-15/2023-02-20",
             "05-12-2010T10:08:35",
             "2010-6-05",
             "2010-02"
         ],
-        "texte_réponse": "",
-        "réponse_correcte": [
+        "answer_text": "",
+        "correct_answer": [
             0,
             4
         ]
     },
     {
         "question": "Le ScientificNameID est un terme DwC obligatoire pour OBIS. Il représente un identifiant unique et persistant pour le nom du taxon. OBIS recommande d'utiliser l'identifiant (LifeScience Identifier (LSID)) du Registre mondial des espèces marines (WoRMS). Accédez à WoRMS et recherchez Ascidia curvata. Quel est le ScientificNameID de cette espèce?",
-        "réponses": [
+        "answers": [
             "urn:lsid:marinespecies.org:taxname:103483",
             "http://www.marinespecies.org/aphia.php?p=taxdetails&id=249981",
             "ascidia_curvata_249981",
             "urn:lsid:marinespecies.org:taxname:249981"
         ],
-        "texte_réponse": "",
-        "réponse_correcte": 3
+        "answer_text": "",
+        "correct_answer": 3
     },
     {
         "question": "Lorsqu'un ScientificName n'est pas dans WoRMS, je peux laisser le ScientificNameID vide, mais contacter l'équipe de gestion des données de WoRMS pour y faire ajouter le nom. J'ajouterai le WoRMS LSID dans la prochaine version de l'ensemble de données.",
-        "réponses": [
+        "answers": [
             "Vrai",
             "Faux"
         ],
-        "texte_réponse": "Vous ne devez corriger ou mettre à jour les ensembles de données qu'avec le consentement du fournisseur de données d'origine.",
-        "réponse_correcte": 0
+        "answer_text": "Vous ne devez corriger ou mettre à jour les ensembles de données qu'avec le consentement du fournisseur de données d'origine.",
+        "correct_answer": 0
     },
     {
         "question": "Mon jeu de données contient des transects de chalut de fond, comment puis-je le publier dans OBIS?",
-        "réponses": [
+        "answers": [
             "Fournissez les coordonnées suivantes DwC:startdecimalLongitude et DwC:startdecimalLatitude et DwC:enddecimalLongitude et DwC:enddecimalLatitude.",
             "OBIS ne peut pas traiter les transects linéaires, uniquement les données ponctuelles.",
             "Fournissez le transect en tant que DwC:footprintWKT.",
             "Fournissez le point médian ici DwC:decimalLatitude et DwC:decimalLongitude et ajoutez le rayon dans DwC:coordinateuncertaintyInMeters. Le transect en lui-même peut être fourni ici DwC:footprintWKT."
         ],
-        "texte_réponse": "",
-        "réponse_correcte": 3
+        "answer_text": "",
+        "correct_answer": 3
     },
     {
         "question": "Mon ensemble de données contient des plages de dates. Comment publier ceci dans OBIS?",
-        "réponses": [
+        "answers": [
             "Fournissez les dates comme DwC:startEventDate et DwC:endEventDate",
             "Indiquez la date de début et de fin dans DwC:eventDate avec un / comme séparateur",
             "Fournissez la date de milieu."
         ],
-        "texte_réponse": "",
-        "réponse_correcte": 1
+        "answer_text": "",
+        "correct_answer": 1
     },
     {
         "question": "Les coordonnées doivent être enregistrées dans des formats décimaux. Quelle est la conversion correcte de 18°30’25”N - 5°15’E en decimalLongitude, decimalLatitude?",
-        "réponses": [
+        "answers": [
             "18.50694, -5.25000",
             "18.50694, 5.25000",
             "18.30250, 5.15000",
@@ -98,54 +98,54 @@
             "18,50694, 5,25000",
             "5.25000, 18.50694"
         ],
-        "texte_réponse": "",
-        "réponse_correcte": 5
+        "answer_text": "",
+        "correct_answer": 5
     },
     {
         "question": "Un ensemble de données contient des données sensibles (comme l'abondance d'une espèce commerciale précieuse ou d'une espèce en voie de disparition) et vous n'êtes pas autorisé à rendre ces emplacements publics. Que devriez vous faire?",
-        "réponses": [
+        "answers": [
             "Vous pouvez les convaincre de publier les données sans abondance.",
             "Vous n'avez pas à fournir les emplacements exacts, vous pouvez prendre le centre d'une cellule de la grille (comme 1x1 degrés) et mentionner que la position est convertie au centre d'une cellule, vous pouvez donner cette information dans la colonne DwC: dataGeneralizations.",
             "Demandez si les données peuvent être publiées quand elles auront plus de 5 ans.",
             "Vous pensez qu'il est bon que ces données ne soient pas publiques, alors laissez-les telles quelles."
         ],
-        "texte_réponse": "",
-        "réponse_correcte": 1
+        "answer_text": "",
+        "correct_answer": 1
     },
     {
         "question": "Si vous avez des données sur les observations de dauphins, quel vocabulaire devriez-vous utiliser pour le terme DwC:basisOfRecord?",
-        "réponses": [
+        "answers": [
             "LivingSpecimen",
             "Present",
             "PreservedSpecimen",
             "HumanObservation"
         ],
-        "texte_réponse": "",
-        "réponse_correcte": 3
+        "answer_text": "",
+        "correct_answer": 3
     },
     {
         "question": "Lesquels des termes Darwin Core sont obligatoires pour OBIS?",
-        "réponses": [
+        "answers": [
             "occurrenceID, scientificName, scientificNameID, eventDate, decimalLatitude, decimalLongitude, basisOfRecord, occurrenceStatus.",
             "occurrenceID, scientificName, scientificNameID, decimalLatitude, decimalLongitude, dateIdentified, scientificNameAuthorship, basisOfRecord",
             "occurrenceID, eventID, minimumDepth, eventDate, decimalLatitude, decimalLongitude, country, identifiedBy",
             "occurrenceID, scientificName, scientificNameID, decimalLatitude, decimalLongitude, identificationRemarks, locationID, materialSampleID"
         ],
-        "texte_réponse": "",
-        "réponse_correcte": 0
+        "answer_text": "",
+        "correct_answer": 0
     },
     {
         "question": "OBIS nécessite un minimum de 12 termes DwC à remplir afin de publier vos données.",
-        "réponses": [
+        "answers": [
             "Vrai",
             "Faux"
         ],
-        "texte_réponse": "OBIS a actuellement huit termes DwC requis: occurrenceID, eventDate, decimalLongitude, decimalLatitude, scientificName, scientificNameID, occurrenceStatus, basisOfRecord.",
-        "réponse_correcte": 1
+        "answer_text": "OBIS a actuellement huit termes DwC requis: occurrenceID, eventDate, decimalLongitude, decimalLatitude, scientificName, scientificNameID, occurrenceStatus, basisOfRecord.",
+        "correct_answer": 1
     },
     {
         "question": "Qu'est-ce que cela signifie quand individualCount a la valeur suivante?",
-        "réponses": [
+        "answers": [
             {
                 "NULL": [
                     "100 individus ont été observés",
@@ -168,8 +168,8 @@
                 ]
             }
         ],
-        "texte_réponse": "",
-        "réponse_correcte": {
+        "answer_text": "",
+        "correct_answer": {
             "NULL": 1,
             "0": 2,
             "100": 0
@@ -177,31 +177,31 @@
     },
     {
         "question": "L'ensemble de données que vous traitez indique que «Gadus morhua juvénile» a été observé. Comment cela se traduit-il par Darwin Core?",
-        "réponses": [
+        "answers": [
             "<ul><li>scientificName: Gadus morhua juvenile</li></ul>",
             "<ul><li>scientificName: Gadus morhua</li><li>lifestage: juvenile</li></ul>"
         ],
-        "texte_réponse": "Le champ ScientificName ne doit contenir qu'un nom de taxon, les autres informations doivent être réparties dans d'autres champs pertinents. Notez que si OBIS autorise l'utilisation du champ lifestage, il est recommandé de stocker ces informations dans l'extendedMeasurementOrFact (eMoF), car cela permet la liaison vers le vocabulaire de BODC sur les stades de vies http://vocab.nerc.ac.uk/collection/S11/current",
-        "réponse_correcte": 1
+        "answer_text": "Le champ ScientificName ne doit contenir qu'un nom de taxon, les autres informations doivent être réparties dans d'autres champs pertinents. Notez que si OBIS autorise l'utilisation du champ lifestage, il est recommandé de stocker ces informations dans l'extendedMeasurementOrFact (eMoF), car cela permet la liaison vers le vocabulaire de BODC sur les stades de vies http://vocab.nerc.ac.uk/collection/S11/current",
+        "correct_answer": 1
     },
     {
         "question": "Le ScientificNameID se trouve dans WoRMS",
-        "réponses": [
+        "answers": [
             "Vrai",
             "Faux"
         ],
-        "texte_réponse": "",
-        "réponse_correcte": 0
+        "answer_text": "",
+        "correct_answer": 0
     },
     {
         "question": "Que représente le terme DwC:locationID?",
-        "réponses": [
+        "answers": [
             "Le nom de l'endroit où l'échantillon a été prélevé.",
             "Un code de référence fourni par le service Web de WoRMS.",
             "L'identifiant d'événement",
             "Un identifiant unique et persistant pour l'emplacement de l'enregistrement obtenu à partir d'un service de répertoire géographique, tel que www.marineregions.org."
         ],
-        "texte_réponse": "",
-        "réponse_correcte": 3
+        "answer_text": "",
+        "correct_answer": 3
     }
 ]
