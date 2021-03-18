@@ -1,6 +1,11 @@
 ---
-title: "robis_walkthrough_new"
-output: html_document
+title: "Pas à pas {robis}"
+output:
+  html_document:
+    df_print: paged
+    always_allow_html: yes
+  word_document: default
+  pdf_document: default
 ---
 <!--source:https://obis.org/manual/accessr-->
 
@@ -9,19 +14,20 @@ output: html_document
 1- Le package {devtools} disponible sur le CRAN (dépôt de package R en ligne) doit être installé en premier pour permettre l'installation du package {robis} depuis GitHub (Sources: https://obis.org/manual/accessr/, https://iobis.github.io/robis/articles/getting-started.html).
 2- Puisque nous en sommes à l'installation de package sur le CRAN, allons chercher tous les packages dont nous aurons besoin.
 ```{r setup, include=FALSE}
-install.packages("devtools")
-install.packages("ggplot2")
-install.packages("dplyr")
+#install.packages("devtools")
+#install.packages("ggplot2")
+#install.packages("dplyr")
 library(devtools)
 ```
 
 Lorsque {devtools} est installé, la fonction install_github() peut être utilisée pour installer {robis}:
 ```{r, include=FALSE}
-install_github("iobis/robis")
+#install_github("iobis/robis")
 ```
 
 Inclure {robis} et les autres packages que nous allons utiliser dans ce notebook
 ```{r} 
+library(udunits2)
 library(robis)
 library(ggplot2)
 library(dplyr)
@@ -65,7 +71,7 @@ View(islands)
 
 La fonction map_leaflet() nous permet de créer une carte intéractive simple
 
-```{r islands}
+```{r}
 map_leaflet(islands)
 ```
 ##### Appliquer un filtre de profondeur
@@ -92,13 +98,13 @@ map_leaflet(lionfish_native)
 Coup d'oeil rapide à votre jeu de données
 
 La première chose à faire lors de l'exploration d un jeu de données est de vérifier ses colonnes:
-```{r islands}
+```{r}
 names(islands)
 ```
 
 Ensuite, utiliser table() pour créer une table de contingence afin de trouver quelles valeurs sont présentes dans certaines colonnes d'intérêt.
 
-```{r islands}
+```{r}
 table(islands$phylum)
 
 table(islands$family, islands$phylum)
@@ -108,12 +114,12 @@ table(islands$family, islands$phylum)
 
 Il est toujours intéressant de regarder la distribution temporelle des entrées de jeu de données. Afin de les visualiser, il nous faut une colonne contenant les années d'entrée des occurrences. Les occurrences téléchargées depuis le mappeur ou obtenus en utilisant {robis} ont une colonne nommée yearcollected. Si cette variable est inexistante dans votre jeu de données, il faut créer une colonne d année en récupérant l information depuis la colonne enventDates en utilisant la fonction  d'analyse de date as.Date(), puis en l extrayant avec la fonction format(). N hésitez pas a utiliser ?as.Date ou ?format pour obtenir plus d information depuis l aide R:
 
-```{r islands}
+```{r}
 table(islands$year)
 ```
 Le package {ggplot2} est un superbe outil de visualisation. Nous approfondirons notre voyage dans {ggplot2} plus loin dans ce chapitre. Pour le moment, vérifiez que vous avez bien installé le package puis lancez la commande ci-dessous pour produire un diagramme en barre montrant la distribution des occurrences au cours du temps:
 
-```{r islands}
+```{r}
 ggplot() + 
  geom_bar(data = islands, stat = "count",aes(x = year, fill = phylum), binwidth = 5) +
  scale_fill_brewer(palette = "Paired") +
@@ -148,7 +154,7 @@ View(occ)
 ```
 Les données de MeasurementOrFact sont nichées dans occurrence, mais la fonction `measurements()` permet de les extraire vers leur propre data frame. Utilisez le paramètre fields =  pour indiquer les champs d occurrence  devant être conservés dans la table des mesures.
 
-```{r occ}
+```{r}
 mof <- measurements(occ, fields = c("scientificName", "decimalLongitude", "decimalLatitude"))
 View(mof)
 ```
@@ -170,7 +176,7 @@ table(lag$species)
 
 La fonction filter() peut être utilisée pour filtrer les occurrences en se basant sur une ou plusieurs propriétés.
 Par exemple, pour garder uniquement les occurrences de Lagis australis:
-```{r lag}
+```{r}
 lagaus <- lag %>% filter(species == "Lagis australis")
 
 map_leaflet(lagaus)
@@ -182,7 +188,7 @@ Remarquez l opérateur pipe %>% (https://juba.github.io/tidyverse/10-dplyr.html,
 
 Voici un autre exemple où seules les occurrences appartenant aux jeux de données du RSMP Baseline Dataset sont sélectionnées:
 
-```{r lag}
+```{r}
 rsmp <- lag %>% filter(grepl("RSMP Baseline Dataset", datasetName))
 
 # grepl is used for matching strings
@@ -200,25 +206,25 @@ occurrence("Abra tenuis", mof = TRUE, measurementtype = "biomass") %>%
 ##### Sélectionner des colonnes
 La fonction select() sélectionne ou désélectionne des colonnes. 
 Pour sélectionner uniquement les champs decimalLongitude et decimalLatitude:
-```{r lagaus}
+```{r}
 lagaus %>% select(decimalLongitude, decimalLatitude)
 ```
 A partir de ce résultat, des coordonnées distintes peuvent être obtenues en utilisant la fonction distinct():
 
-```{r lagaus}
+```{r}
 lagaus %>% select(decimalLongitude, decimalLatitude) %>% distinct()
 ```
 
 En simplifiant:
 
-```{r lagaus}
+```{r}
 
 lagaus %>% distinct(decimalLongitude, decimalLatitude)
 ```
 
 Dans l exemple suivant les colonnes decimalLongitude et decimalLatitude sont également sélectionnées, mais en vérifiant les colonnes dont le noms commence par decimal:
 
-```{r lagaus}
+```{r}
 lagaus %>% select(starts_with("decimal"))
 ```
 
@@ -228,7 +234,7 @@ Pour supprimer une colonne, il suffit d ajouter le signe moins devant le nom de 
 
 Pour regrouper les données et créer un résumé de statistiques descriptives, on peut utiliser les fonctions group_by() and summarize(). 
 Pour regrouper les occurrences par espèces puis compter le nombre d'entrées par groupe et calculer les latitudes et longitudes min, max and median:
-```{r lag}
+```{r}
 lag %>%
   group_by(species) %>%
   summarize(
@@ -246,7 +252,7 @@ lag %>%
 La fonction arrange() permet de trier les données. Les noms de colonnes peuvent être compilés dans desc() pour les trier dans l ordre décroissant. 
 Ici on montre 1- les plus récents et 2- les plus vieux enregistrements de jeux de données de Lagis:
 
-```{r lag}
+```{r}
 head(lag %>% arrange(eventDate)) %>% select(eventDate, decimalLongitude, decimalLatitude, datasetName)
 
 head(lag %>% arrange(desc(eventDate))) %>% select(eventDate, decimalLongitude, decimalLatitude, datasetName)
@@ -256,6 +262,7 @@ head(lag %>% arrange(desc(eventDate))) %>% select(eventDate, decimalLongitude, d
 mutate() est utilisé pour ajouter une colonne.
 Pour ajouter une colonne d année basée sur eventDate:
 
-```{r lag}
-lag_withyear <-lag %>% mutate(year = format(as.Date(eventDate), "%Y"))  
+```{r}
+lag_withyear <-lag %>% mutate(year = format(as.Date(eventDate), "%Y")) 
+head(lag_withyear)
 ```
