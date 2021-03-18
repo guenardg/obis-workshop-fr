@@ -25,7 +25,7 @@ h5{
     display(style)
 class Quiz():
     def __init__(self, quiz_file):
-        fp = open(quiz_file, 'r')
+        fp = open(quiz_file, 'rb')
         self.quiz_file = json.load(fp)
         fp.close()
 
@@ -153,5 +153,5 @@ class Quiz():
         
         with outp:
             outp.clear_output()
-            print(f"You have correctly solved {round(calculated_percent,2)}% of the questions.")
+            print(f"Vous avez correctement répondu {round(calculated_percent,2)}% des questions.")
 
