@@ -33,13 +33,13 @@ mad <- occurrence("Madrepora")
 map_leaflet(mad)
 ```
 Puis lancez `check_onland()`sur ces données. Par défaut la fonction retourne un data frame contenant toutes les entrées dont les coordonnées sont terrestres (une autre option consiste à retourner un dataframe avec des erreurs):
-```{r mad}
+```{r}
 land <- check_onland(mad)
 map_leaflet(land)
 ```
 Dans certains cas, appliquer un tampon lorsque l'on regarde les entrées terrestres paraît sensé. Ici, nous avons ajouté une zone tampon de 1000 m:
 
-```{r mad}
+```{r}
 land_buffer <- check_onland(mad, buffer = 1000)
 map_leaflet(land_buffer)
 ```
@@ -47,7 +47,7 @@ map_leaflet(land_buffer)
 Comme attendu, cela retourne des entrées moins erronées.
 
 Nous pouvons maintenant créer une carte affichant les entrées suspectes. En orange par défaut, elles apparaissent en rouge lorsqu'elles sont suspectes, même avec la zone tampon de 1000 m:
-```{r land, land_buffer}
+```{r}
 world <- map_data("world")
 ggplot() +
  geom_polygon(data = world, aes(x = long, y = lat, group = group), fill = "#dddddd") +
@@ -67,7 +67,7 @@ occurrence <- archive$data$occurrence.txt
 ```
 Ensuite, on peut commencer la procédure de correspondance des taxons en rentrant les noms scientifiques dans la fonction `match_taxa()`:
 
-```{r occurrence}
+```{r}
 names <- match_taxa(occurrence$scientificName)
 ```
 
@@ -78,7 +78,7 @@ Tapez info pour afficher les noms ayant besoin d une action manuelle : -y- pour 
 Vous obtiendrez finalement un dataframe contenant les noms correpondants, les LSID (identifiants uniques) de WoRMS LSID, et le type de correpondance.
 Ajoutés les LSIDs à vos données sources en tant que scientificNameID.
 
-```{r occurrence, names}
+```{r}
 occurrence$scientificNameID <- names$scientificNameID
 View(names)
 ```
@@ -124,7 +124,7 @@ problems <- check_depth(abrseg, depthmargin = 10)
 ```
 Pour tracer les profondeurs échantillonées en fonction de la profondeur du fond-bottom depth, utilisez d abord `lookup_xy()` pour obtenir la bathymetrie pour nos points:
 
-```{r problems}
+```{r}
 bathymetry <- lookup_xy(problems, shoredistance = FALSE, grids = TRUE, areas = FALSE)$bathymetry
 plot(bathymetry, problems$maximumDepthInMeters) +
 abline(0, 1, lty = 2)+
@@ -141,7 +141,7 @@ head(report)
 `check_outliers_species` et `check_outliers_dataset` utilisent le service web qc-service pour identifier les entrées présentant des valeurs statistiques aberrantes (outliers). Pour les espèces, la vérification des aberrances se fait sur les données environnementales (bathymétrie, température et salinité de surface) et spatiales. Les valeurs aberrantes sont identifiées comme étant tous les poins qui s éloigne de plus de 6 x (écart médian absolu) ou 3 x écart interquartile à la médiane. `check_outliers_species` requiert que le champ scientificNameID soit rempli. Quand l espèce est déjà connue dans OBIS, alors la médiane, l écart médian absolu et l écart interquartile à la médiane de l entrée connue sont utilisés pour comparer la nouvelle espèce rentrée. Pour les jeux de données, seules les valeurs aberrantes spatiales sont identifiées. Les valeurs aberrantes spatiales sont détectées en se basant sur la distance au centroid geographique de tous les coordonnnés uniques. La liste dans le champ supplémentaire du rapport de debbug fournit toutes les statistiques importantes sur lesquelles les analyses de valeurs aberrantes sont basées.
  `report` donne également un aperçu de ces valeurs aberrantes. `plot_outliers(report)` permet de tracer ces dernières.
 
-```{r abra}
+```{r}
 report <- check_outliers_dataset(abra, report=T)
 head(report)
 plot_outliers(report)
@@ -199,7 +199,7 @@ Vérifier le champ parentEventIDs dans la table des évènements (Event Core)
 Utilisez `check_eventids()` pour vérifier si tous les parentEventIDs dans la table des évènements Event Core ont un eventID correpondant. 
 Dans l exemple ci-dessous, le jeu de données original est d abord vérifié puis une erreur est introduite et enfin, la donnée est vérifiée à nouveau.
 
-```{r event}
+```{r}
 check_eventids(event)
 event$parentEventID[event$eventID == "4000691_cryptic"] <- "dummy_1"
 check_eventids(event)
@@ -210,7 +210,7 @@ Vérifier les identifiants des données de la table principale dans le fichier s
 `check_extension_eventids()` pour vérifier si les identifiants dans le fichier supplémentaire (extension file) ont un eventIDs correpondant dans le fichier d évènement de la table principale (Event Core file). 
 Une fois encore dans notre exemple, nous allons vérifier des données dans lesquelles nous avons volontairement introduit une erreur. La fonction retourne une table d erreurs (s il y en a). La champ de paramètre est le nom de la colonne d identifiant dans le fichier supplémentaire:
 
-```{r event, occurrence}
+```{r}
 check_extension_eventids(event, occurrence, field = "id")
 occurrence$id[occurrence$occurrenceID == "48432"] <- "dummy_2"
 check_extension_eventids(event, occurrence, field = "id")
@@ -222,7 +222,7 @@ Il est parfois utile d'avoir une table des occurrences platte/dénormalisée (en
 Retournez à une version propre des données puis regardez le nom des colonnes avant et après la manipulation:
 
 
-```{r archive}
+```{r}
 event <- archive$data$event.txt
 occurrence <- archive$data$occurrence.txt
 mof <- archive$data$extendedmeasurementorfact.txt
@@ -304,7 +304,7 @@ exportTree(tree, "tree.html")
 ```
 ## Rapport qualité des données 
 <!--not working-->
-`report()` ggénère un rapport de qualité simple des données
+`report()` génère un rapport de qualité simple des données
 <!--
 ```{r}
 report(abra)
